@@ -41,8 +41,6 @@ public class MyGameView extends View {
 	public enum Outcome { WIN, DRAW, UNDECIDED };
 	
 	private int mSxy;
-	private int mOffetX;
-	private int mOffetY;
 
 	private int rowLines[] = new int[4];
 	private int colLines[] = new int[4];
@@ -117,8 +115,8 @@ public class MyGameView extends View {
         int size = sx < sy ? sx : sy;
 
         mSxy = size;
-        mOffetX = (w - 3 * size) / 2;
-        mOffetY = (h - 3 * size) / 2;
+        int mOffetX = (w - 3 * size) / 2;
+        int mOffetY = (h - 3 * size) / 2;
 
         Log.v(TAG, "mOffetX: " + mOffetX + "      mOffetY: " + mOffetY);
         
